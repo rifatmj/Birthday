@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For Nitu ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div id="intro" class="screen">
+  <h1 id="introText"></h1>
+</div>
+
+<!-- WALK -->
+<div id="walk" class="screen hidden">
+  <div class="player"></div>
+  <p>Tap anywhere to walk →</p>
+</div>
+
+<!-- DOOR -->
+<div id="doorScene" class="screen hidden">
+  <div class="door" id="door"></div>
+  <p>Tap the door</p>
+</div>
+
+<!-- ROOM -->
+<div id="room" class="screen hidden">
+  <canvas id="particles"></canvas>
+  <div class="switch" id="switch"></div>
+  <p>Turn on the light...</p>
+</div>
+
+<!-- PARTY -->
+<div id="party" class="screen hidden">
+  <canvas id="fireworks"></canvas>
+
+  <h1 class="title">Happy Birthday Nitu 🎉</h1>
+
+  <div class="cake">
+    <div class="candle"></div>
+  </div>
+
+  <div class="boy" id="boy"></div>
+  <p id="message"></p>
+</div>
+
+<audio id="music" src="music.mp3"></audio>
+<audio id="voice" src="voice.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

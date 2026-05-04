@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* SCREEN SYSTEM */
+.screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.05);
+}
+
+/* INTRO */
+#introText {
+  font-size: 34px;
+  text-shadow: 0 0 20px white;
+}
+
+/* PLAYER */
+.player {
+  width: 45px;
+  height: 90px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 20px white;
+  position: absolute;
+  left: 10%;
+  transition: left 2s ease;
+}
+
+/* REALISTIC DOOR */
+.door {
+  width: 150px;
+  height: 250px;
+  background: linear-gradient(135deg, #6b3b1f, #2a140a);
+  border-radius: 8px;
+  position: relative;
+  transform-origin: left;
+  transition: transform 1s ease;
+
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.8);
+}
+
+.door::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: gold;
+  border-radius: 50%;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+}
+
+/* OPEN DOOR */
+.door.open {
+  transform: rotateY(-110deg);
+}
+
+/* SWITCH (REALISTIC) */
+.switch {
+  width: 60px;
+  height: 120px;
+  background: linear-gradient(145deg, #333, #111);
+  border-radius: 14px;
+  cursor: pointer;
+  position: relative;
+
+  box-shadow:
+    inset 0 0 10px rgba(0,0,0,0.8),
+    0 0 10px rgba(255,255,255,0.1);
+}
+
+.switch::after {
+  content: "";
+  width: 28px;
+  height: 28px;
+  background: #777;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 16px;
+  transition: top 0.3s ease;
+}
+
+.switch:active::after {
+  top: 75px;
+  background: yellow;
+  box-shadow: 0 0 20px yellow;
+}
+
+/* PARTY */
+#party {
+  background: radial-gradient(circle, #1a1a1a, black);
+}
+
+.title {
+  font-size: 28px;
+  text-shadow: 0 0 15px pink;
+}
+
+/* CAKE */
+.cake {
+  width: 170px;
+  height: 110px;
+  background: linear-gradient(to bottom, pink, #ff5c9e);
+  border-radius: 12px;
+  position: relative;
+  margin: 20px;
+  box-shadow: 0 0 30px rgba(255,105,180,0.4);
+}
+
+.candle {
+  width: 10px;
+  height: 30px;
+  background: yellow;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px yellow;
+}
+
+/* BOY */
+.boy {
+  width: 70px;
+  height: 150px;
+  background: white;
+  border-radius: 40px;
+  opacity: 0;
+  box-shadow: 0 0 60px white;
+  transition: opacity 1.5s ease;
+}
+
+/* CANVAS FIX */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
